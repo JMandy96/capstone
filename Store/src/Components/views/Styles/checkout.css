@@ -1,0 +1,23 @@
+.checkout{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    height: 40vh;
+    border-radius: 3px;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+}
+
+.address > input{
+    margin: 5px;
+}

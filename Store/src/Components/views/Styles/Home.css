@@ -1,0 +1,39 @@
+body {
+  background-image: url('../../../assets/hannah-morgan-ycVFts5Ma4s-unsplash.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-position: center top; 
+  
+}
+.page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #b3ea11;
+  text-shadow: 1px 1px 45px #b3ea11, 1px 1px 50px yellow, 1px 1px 100px black;
+  font-family: 'Dancing Script', cursive;
+  font-size: 75px;
+  margin-top: 25vh;
+}
+.socials{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 13px;
+}
+
+.fab.fa-instagram {
+  color: #e4405f;
+  font-size: 20px;
+}
+.instalink{
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
