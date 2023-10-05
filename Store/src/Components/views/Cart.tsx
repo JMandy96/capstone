@@ -76,7 +76,7 @@ export const CartProvider: React.FC<ICartProviderProps> = ({ children }) => {
       }
       
   
-      const response = await fetch('/api/cart/remove', {
+      const response = await fetch(`/api/remove/${productId}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, productId })
