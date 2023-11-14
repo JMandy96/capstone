@@ -38,7 +38,7 @@ def register():
         first_name=first_name,
         last_name=last_name,
         email=email,
-        password=generate_password_hash(password, method='pbkdf2:sha256', salt_length=16)
+        password=password
     )
 
     db.session.add(new_user)
@@ -53,14 +53,22 @@ def login():
     password = data.get('password')
 
     user = User.query.filter_by(email=email).first()
+    print(f"User found: {user}")
+    
 
-    if user and check_password_hash(user.password, password):
+    if user:
+        password_check = check_password_hash(user.password, password)
+        print(f"Password check result: {password_check}")
 
-        access_token = create_access_token(identity=user.id)
-        response_data = {"access_token": access_token, "user_id": user.id} 
-        return jsonify(response_data), 200
+        if password_check:
+            access_token = create_access_token(identity=user.id)
+            response_data = {"access_token": access_token, "user_id": user.id, "is_admin": user.is_admin} 
+            print(f'is admin = {user.is_admin}')
+            return jsonify(response_data), 200
+        else:
+            return jsonify({"message": "Invalid credentials"}), 401
     else:
-        return jsonify({"message": "Invalid credentials"}), 401
+        return jsonify({"message": "User not found"}), 401
 
     
 @logout_bp.route('/api/logout', methods=['POST'])

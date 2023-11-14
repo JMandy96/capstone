@@ -29,6 +29,8 @@ const Login = () => {
       
       if (response.data.access_token) {
         localStorage.setItem('userToken', response.data.access_token);
+        const user = { id: response.data.user_id, is_admin: response.data.is_admin };
+        localStorage.setItem('user', JSON.stringify(user));
         login(response.data.user_id);
         navigate("/products");
       } else {

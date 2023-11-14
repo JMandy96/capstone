@@ -13,6 +13,7 @@ import Checkout from "./Components/views/Checkout"
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from "@stripe/react-stripe-js"
 import { useEffect, useState } from "react";
+import AdminPage from "./Components/views/AdminPage"
 
 
 const stripePromise = loadStripe("pk_test_51NwWhQHmtOnVZs17pvjj4jjM6d0I2KXfdjbyxBUbVolb1c1RxJ5jpgUeJkqU5meRCL8XPAhSBvR3irRMOAXg9d3U00WlFzSeJl");
@@ -95,9 +96,8 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/cart" element={<CartView />} />
-            
               <Route path="/checkout" element={<Elements stripe={stripePromise}><Checkout /></Elements>} />
-
+              <Route path="/admin-page" element={<AdminPage />} /> 
 
               <Route path="/order-complete" element={<OrderComplete />} />
             </Routes>
