@@ -33,7 +33,7 @@ def create_app():
     app.config.from_object(Config)
 
     db.init_app(app)
-    CORS(app, resources={r"/api/*": {"origins": "https://6554259984c0953ff349c0fe--profound-palmier-bc28df.netlify.app"}})
+    CORS(app, resources={r"/api/*": {"origins": "https://profound-palmier-bc28df.netlify.app/"}})
     login_manager.init_app(app)
     migrate.init_app(app, db)
 
