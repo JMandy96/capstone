@@ -21,7 +21,7 @@ Mako==1.2.4
 MarkupSafe==2.1.3
 psycopg2-binary==2.9.7
 PyJWT==2.8.0
-python-dotenv==1.0.0
+python-dotenv==0.21.1
 requests==2.31.0
 SQLAlchemy==2.0.21
 stripe==6.6.0
