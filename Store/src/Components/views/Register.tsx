@@ -28,7 +28,7 @@ const Register = () => {
 
 
     try {
-        const response = await axios.post("http://127.0.0.1:5000/api/register", formData);
+        const response = await axios.post("https://rlvtg.onrender.com/api/register", formData);
         console.log("Registration successful:", response.data);
         setFormData({
             first_name: "",

@@ -21,7 +21,7 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const { addToCart } = useCart();
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://rlvtg.onrender.com/api/products')
       .then((response) => {
         const data = response.data;
         setProducts(data);

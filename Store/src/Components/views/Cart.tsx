@@ -46,7 +46,7 @@ export const CartProvider: React.FC<ICartProviderProps> = ({ children }) => {
       
 
       console.log("Sending payload:", payload);
-      const response = await axios.post('http://localhost:5000/api/cart/add', payload);
+      const response = await axios.post('https://rlvtg.onrender.com/api/cart/add', payload);
 
       
       if (response.status === 201) {

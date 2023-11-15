@@ -24,7 +24,7 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      const response = await axios.post("http://127.0.0.1:5000/api/login", formData);
+      const response = await axios.post("https://rlvtg.onrender.com/api/login", formData);
       console.log("Login Response Data:", response.data); 
       
       if (response.data.access_token) {

@@ -21,7 +21,7 @@ const AdminPage = () => {
   });
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:5000/api/products')
+    axios.get('https://rlvtg.onrender.com/api/products')
       .then(response => setProducts(response.data))
       .catch(error => console.error('Error fetching products', error));
   }, []);
@@ -34,7 +34,7 @@ const AdminPage = () => {
   const handleAddProduct = (e: FormEvent) => {
     e.preventDefault();
     console.log(newProduct);
-    axios.post('http://127.0.0.1:5000/api/products', newProduct)
+    axios.post('https://rlvtg.onrender.com/api/products', newProduct)
     .then(response => {
       setProducts([...products, response.data]);
       setNewProduct({
@@ -50,7 +50,7 @@ const AdminPage = () => {
 
   
   const handleDeleteProduct = (productId: number) => {
-    axios.delete(`http://127.0.0.1:5000/api/products/${productId}`)
+    axios.delete(`https://rlvtg.onrender.com/api/products/${productId}`)
     .then(() => {
       setProducts(products.filter(product => product.id !== productId));
     })

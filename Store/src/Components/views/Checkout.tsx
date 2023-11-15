@@ -110,7 +110,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ address }) => {
       setIsLoading(true);
 
       try {
-        const response = await fetch('http://localhost:5000/api/createPayment', {
+        const response = await fetch('https://rlvtg.onrender.com/api/createPayment', {
           method: 'POST',
           headers: {
             'Content-Type' : 'application/json'

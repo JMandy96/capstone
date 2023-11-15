@@ -9,7 +9,7 @@ const ForgotPassword: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/forgot-password", { email });
+      const response = await axios.post("https://rlvtg.onrender.com/forgot-password", { email });
 
       if (response.data.message) {
         setMessage(response.data.message);
